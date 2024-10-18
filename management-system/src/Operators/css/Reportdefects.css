@@ -1,0 +1,102 @@
+/* src/css/Reportdefects.css */
+body {
+    background-color: #2b4a68;/* Dark background color for the overall layout */
+    color: white; /* Default text color */
+   
+}
+
+.gallery {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Centers the images */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+    gap: 50px; /* Space between images */
+    padding: 10px; /* Add some padding */
+    align-items: center;
+   
+}
+  
+.image-container {
+    margin: 10px; /* Add some margin between images */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-align: center; /* Center the text under each image */
+}
+  
+.image {
+    width: 150px; /* Set a uniform width for all images */
+    height: 150px; /* Set a uniform height for all images */
+    object-fit: cover; /* Ensures images are scaled correctly without distortion */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+  
+.image-name {
+    margin-top: 5px; /* Space between image and text */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: white; /* Change the text color to white */
+}
+
+.image-container.selected {
+    border: 2px solid rgb(255, 255, 255); /* Highlight selected image */
+    padding: 10px;
+    transition: 1s;
+    background-color: #9DBDAA; /* Light blue background */
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 50px;
+    margin-left: 100px;
+}
+
+.other-input {
+    margin-left: 50px; /* Space between label and input */
+}
+
+.media-upload {
+    
+    margin-top: 20px; /* Space above the media upload section */
+    text-align: center; /* Center the text */
+}
+
+.media-upload label {
+    margin: 0 15px; /* Space between radio buttons */
+}
+
+/* Button Styles */
+button {
+    display: flex;
+    margin-left: 45%;
+  
+    color: black; /* White text */
+    font-weight: 900;
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-top: 20px; /* Add margin above the button */
+    margin-bottom: 20px; /* Add margin below the button */
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #65d26a; /* Darker green on hover */
+}
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.question-container {
+    padding-bottom: 10px; /* Space below each question */
+    /* Light line between questions */
+}
+.message{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(71, 140, 123);
+
+}

@@ -1,0 +1,28 @@
+.tasks-page {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    display: flex; /* Keep display flex for the main page layout */
+    flex-direction: column; /* Arrange items vertically */
+}
+
+body {
+    background-color: #2b4a68; /* Dark blue background for body */
+}
+
+.tasks-list {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create columns with a minimum width */
+    gap: 20px; /* Space between task cards */
+}
+
+.task-card {
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #180c5b; /* Dark background for task cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.imagemachine {
+    width: 100%; /* Ensure images take full width of the card */
+    height: auto; /* Maintain aspect ratio */
+}
