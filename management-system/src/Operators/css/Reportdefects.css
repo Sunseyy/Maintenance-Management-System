@@ -4,7 +4,10 @@ body {
     color: white; /* Default text color */
    
 }
-
+.H1-repport{
+    margin-top: 20px;
+    text-align: center;
+   }
 .gallery {
     display: flex; /* Use flexbox to align items in a row */
     justify-content: center; /* Centers the images */
@@ -64,7 +67,7 @@ body {
 }
 
 /* Button Styles */
-button {
+.button-report{
     display: flex;
     margin-left: 45%;
   
@@ -82,11 +85,11 @@ button {
     justify-content: center;
 }
 
-button:hover {
+.button-report:hover {
     background-color: #65d26a; /* Darker green on hover */
 }
 
-button:focus {
+.button-report:focus {
     outline: none; /* Remove outline on focus */
 }
 

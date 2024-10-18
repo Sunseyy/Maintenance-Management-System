@@ -108,7 +108,7 @@ function ReportDefects() {
   return (
     <div>
         <div className="question-container">
-      <h1>Report Defects</h1>
+      <h1 className='H1-repport'>Report Defects</h1>
       <div className="gallery">
         {images.map((image, index) => (
           <div
@@ -198,7 +198,7 @@ function ReportDefects() {
       {/* Media upload question */}
 
       <div className="question-container">
-      <h2 style={{ textAlign: 'center' }}>Do you have a photo or video describing the problem?</h2>
+      <h2 style={{}}>Do you have a photo  describing the problem?</h2>
       <div className="media-question">
         <label>
           <input
@@ -252,7 +252,7 @@ function ReportDefects() {
 </div>
 
       {/* Submit button */}
-      <button onClick={saveDefectToDatabase}>Submit Defect</button>
+      <button className='button-report' onClick={saveDefectToDatabase}>Submit Defect</button>
       {message && <div className="message">{message}</div>}
     </div>
   );

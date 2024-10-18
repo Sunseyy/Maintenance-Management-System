@@ -1,33 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Login from './Operators/pages/Login';
+import Dashboard from './Operators/pages/dashboard';
 import ReportDefects from './Operators/pages/ReportDefects';
-import TasksPage from './Operators/pages/tasks';
-import CalendarPage from './Operators/pages/CalendarPage';
+import { AuthProvider } from './Operators/pages/AuthContext'; // Make sure this is the correct import
 
-import Machines from './Operators/pages/Dashboard/machines';
-
-import Calendar from './Operators/pages/CalendarPage';
-import MeetingChart from './Operators/pages/Dashboard/meetingChart';
-import LineChart from './Operators/pages/Dashboard/LineChart';
-
-
-
-
-
-
-function App() {
-  return (
-    <div className="App">
-    
-    <div className='main-content'>
-    <Machines/>
-    <LineChart/>
-    <Calendar/>
-    <MeetingChart/>
-    </div>
-
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <AuthProvider> {/* Use AuthProvider instead of AuthContext */}
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Login />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/user" element={<ReportDefects />} />
+                </Routes>
+            </Router>
+        </AuthProvider>
+    );
+};
 
 export default App;
