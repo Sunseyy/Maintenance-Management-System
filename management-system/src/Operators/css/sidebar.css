@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     position: fixed;
+    
     inset: 20px;
     background: #11114e;
     width: 80px;

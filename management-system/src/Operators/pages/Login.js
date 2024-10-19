@@ -43,6 +43,9 @@ const Login = () => {
     return (
         <div className="login-page"> {/* Added wrapper class here */}
             <div className="login-container">
+                {/* Welcome message */}
+                <h1>WELCOME</h1>
+                <h2>Car Manufacturing Management System</h2>
                 <h1 style={{ marginBottom: '20px' }}>Login</h1>
                 <form id="loginForm" onSubmit={handleSubmit}>
                     <div className="input-container">
@@ -59,6 +62,7 @@ const Login = () => {
                     <div className="input-container">
                         <img src={lockIcon} alt="Lock Icon" className="icon" />
                         <input
+                            className='password-input'
                             type="password"
                             placeholder="Password"
                             required
