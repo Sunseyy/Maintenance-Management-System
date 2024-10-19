@@ -8,10 +8,12 @@ import ReportDefects from './Operators/pages/ReportDefects';
 import { AuthProvider } from './Operators/pages/AuthContext';
 import TasksPage from './Operators/pages/tasks';
 import HeaderOperator from './Operators/pages/headerOperator';
-import LeakTestMachine from './Operators/machines/leaktasteMachine';
+
 import Sidebar from './Operators/pages/sidebar';
 import PrivateRoute from './Operators/pages/privateRoute';
- // Import the PrivateRoute component
+import LeakTestMachine from './Operators/machines/leaktasteMachine';
+import Calendar from './Operators/pages/CalendarPage'; // Import the CalendarPage component
+import HeaderAdmin from './Operators/pages/headerAdmin';
 
 const App = () => {
     return (
@@ -19,7 +21,10 @@ const App = () => {
             <Router>
                 <Routes>
                     <Route path="/" element={<Login />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/dashboard" element={
+                        <>
+                        <HeaderAdmin/>
+                      <Dashboard />  </>} />
                     <Route path="/user" element={
                         <PrivateRoute>
                             <HeaderOperator />
@@ -31,25 +36,33 @@ const App = () => {
                             <HeaderOperator />
                             <TasksPage />
                         </PrivateRoute>
-                    } /> {/* Route for Tasks */}
+                    } />
                     <Route path="/report-defects" element={
                         <PrivateRoute>
                             <HeaderOperator />
                             <ReportDefects />
                         </PrivateRoute>
-                    } /> {/* Route for Report Defects */}
+                    } />
                     <Route path="/machines" element={
                         <PrivateRoute>
-                            <Sidebar />
-                            <LeakTestMachine />
+                            <div>
+                                <HeaderAdmin/>
+                                <Sidebar />
+                                <LeakTestMachine />
+                            </div>
                         </PrivateRoute>
                     } />
                     <Route path="/admin/tasks" element={
-                        <>
+                        <div>
+                            <HeaderAdmin/>
                             <Sidebar />
                             <TasksPage />
-                        </>
+                        </div>
                     } />
+                    <Route path="/calendar" element={
+                        <>
+                        <HeaderAdmin></HeaderAdmin>
+                        <Calendar /></>} /> {/* Fixed this line */}
                 </Routes>
             </Router>
         </AuthProvider>

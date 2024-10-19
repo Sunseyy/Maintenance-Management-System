@@ -1,7 +1,11 @@
 :root {
     --primary-clr: #9DBDAA;
   }
- 
+  * {
+    
+    box-sizing: border-box;
+    
+  }
   /* nice scroll bar */
   ::-webkit-scrollbar {
     width: 5px;
@@ -15,19 +19,13 @@
     border-radius: 50px;
   }
   
-  .Calendar_full {
-    
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 30px;
-    background-color: #e2e1dc;
-  }
+ 
   .container {
+    margin-top: 100px;
+    box-sizing: border-box;
     position: relative;
     width: 1200px;
-    min-height: 750px;
+    min-height: 850px;
     margin: 0 auto;
     padding: 5px;
     color: #fff;

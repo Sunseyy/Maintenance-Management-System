@@ -11,7 +11,7 @@ const Dashboard = () => {
             <Sidebar className='sidebar' />
             <div className='information_dashboard'>
                 <div className='interface'>
-                    <div className='Add_event'> Add event </div> 
+                    <Link to="/calendar" className='Add_event'> Add event </Link> {/* Change to Link for navigation */}
                     {/* Add your Calendar component here */}
                     <div className='Check tasks'> Check tasks </div>
                     <div className='Check users'> Check users </div>

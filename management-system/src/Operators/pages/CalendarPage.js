@@ -73,72 +73,74 @@ const Calendar = () => {
   }, [month, year, activeDay]);
 
   return (
-    <div className='Calendar_full'>
-    <div className="container">
-      <div className="left">
-        <div className="calendar">
-          <div className="month">
-            <i className="fas fa-angle-left prev" onClick={() => setMonth(month - 1 < 0 ? 11 : month - 1)}></i>
-            <div className="date">{months[month]} {year}</div>
-            <i className="fas fa-angle-right next" onClick={() => setMonth(month + 1 > 11 ? 0 : month + 1)}></i>
-          </div>
-          <div className="weekdays">
-            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => <div key={day}>{day}</div>)}
-          </div>
-          <div className="days">
-            {Array.from({ length: new Date(year, month + 1, 0).getDate() }, (_, i) => (
-              <div 
-                key={i + 1} 
-                className={`day ${activeDay === i + 1 ? 'active' : ''}`} 
-                onClick={() => setActiveDay(i + 1)}
-              >
-                {i + 1}
+    <div className='calendar-page'>
+      <div className='Calendar_full'>
+        <div className="container">
+          <div className="left">
+            <div className="calendar">
+              <div className="month">
+                <i className="fas fa-angle-left prev" onClick={() => setMonth(month - 1 < 0 ? 11 : month - 1)}></i>
+                <div className="date">{months[month]} {year}</div>
+                <i className="fas fa-angle-right next" onClick={() => setMonth(month + 1 > 11 ? 0 : month + 1)}></i>
               </div>
-            ))}
-          </div>
-          <div className="goto-today">
-            <form onSubmit={goToMonthYear}>
-              <div className="goto">
-                <input type="text" name="dateInput" placeholder="mm/yyyy" className="date-input" />
-                <button type="submit" className="goto-btn">Go</button>
+              <div className="weekdays">
+                {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => <div key={day}>{day}</div>)}
               </div>
-            </form>
-            <button className="today-btn" onClick={gotoToday}>Today</button>
-          </div>
-        </div>
-      </div>
-      <div className="right">
-        <div className="today-date">
-          <div className="event-day">{new Date(year, month, activeDay).toLocaleString('en-US', { weekday: 'short' })}</div>
-          <div className="event-date">{activeDay} {months[month]} {year}</div>
-        </div>
-        <div className="events">
-          {eventsArr
-            .filter(event => event.day === activeDay && event.month === month + 1 && event.year === year)
-            .map((event, index) => (
-              <div key={index}>
-                <h4>Events:</h4>
-                <div>
-                  {event.title} - {event.time}
-                </div>
+              <div className="days">
+                {Array.from({ length: new Date(year, month + 1, 0).getDate() }, (_, i) => (
+                  <div 
+                    key={i + 1} 
+                    className={`day ${activeDay === i + 1 ? 'active' : ''}`} 
+                    onClick={() => setActiveDay(i + 1)}
+                  >
+                    {i + 1}
+                  </div>
+                ))}
               </div>
-          ))}
+              <div className="goto-today">
+                <form onSubmit={goToMonthYear}>
+                  <div className="goto">
+                    <input type="text" name="dateInput" placeholder="mm/yyyy" className="date-input" />
+                    <button type="submit" className="goto-btn">Go</button>
+                  </div>
+                </form>
+                <button className="today-btn" onClick={gotoToday}>Today</button>
+              </div>
+            </div>
+          </div>
+          <div className="right">
+            <div className="today-date">
+              <div className="event-day">{new Date(year, month, activeDay).toLocaleString('en-US', { weekday: 'short' })}</div>
+              <div className="event-date">{activeDay} {months[month]} {year}</div>
+            </div>
+            <div className="events">
+              {eventsArr
+                .filter(event => event.day === activeDay && event.month === month + 1 && event.year === year)
+                .map((event, index) => (
+                  <div key={index}>
+                    <h4>Events:</h4>
+                    <div>
+                      {event.title} - {event.time}
+                    </div>
+                  </div>
+                ))}
 
-          <div className="event-input-container">
-            <input 
-              type="text" 
-              className="event-input" 
-              placeholder="Schedule a fix here" 
-              value={eventTitle}
-              onChange={(e) => setEventTitle(e.target.value)}
-            />
-            <button className="add-event" onClick={addEvent}>
-              <i className="fas fa-plus"></i>
-            </button>
+              <div className="event-input-container">
+                <input 
+                  type="text" 
+                  className="event-input" 
+                  placeholder="Schedule a fix here" 
+                  value={eventTitle}
+                  onChange={(e) => setEventTitle(e.target.value)}
+                />
+                <button className="add-event" onClick={addEvent}>
+                  <i className="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

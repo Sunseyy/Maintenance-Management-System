@@ -16,12 +16,12 @@ margin-top: 10px;
     color: white;
 }
 
-.nav-buttons {
+.nav-buttons, .dashboard-btn {
     display: flex;
     align-items: center;
 }
 
-.nav-btn, .operator-btn {
+.nav-btn, .operator-btn , .dashboard-btn{
     background-color: white;
     color: #9DBDAA;
     border: none;
@@ -33,7 +33,7 @@ margin-top: 10px;
     align-items: center; /* Center icon and text vertically */
 }
 
-.nav-btn:hover, .operator-btn:hover {
+.nav-btn:hover, .operator-btn:hover ,.dashboard-btn:hover{
     background-color: #8cae99;
     color: white;
 }
