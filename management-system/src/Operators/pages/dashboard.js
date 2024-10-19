@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Sidebar from './sidebar';
 import '../css/dashboard.css';
-import Calendar from './CalDash'; // Assuming this is your Calendar component
+// Assuming this is your Calendar component
 import MyChart from './chart';
 
 const Dashboard = () => {

@@ -24,7 +24,7 @@
 
 .icon {
     position: absolute;
-    left: 10px; /* Adjust the icon's horizontal position */
+    left: 100px; /* Adjust the icon's horizontal position */
     top: 50%; /* Center vertically */
     transform: translateY(-50%); /* Adjust for vertical centering */
     width: 20px; /* Set width to fit within the input */
@@ -32,7 +32,7 @@
     color: #9DBDAA; /* Icon color */
 }
 
-.Input-login {
+.Input-login , .password-input{
     width: 75%; /* Set width to 75% */
     padding: 10px 10px 10px 40px; /* Adjust left padding to accommodate the icon */
     border: 1px solid #ccc;
@@ -63,4 +63,16 @@
 
 .forgot-password:hover {
     text-decoration: underline;
+}
+.login-container h1 {
+    font-size: 2rem; /* Adjust as needed */
+    text-align: center;
+    color: #333; /* Change color as needed */
+}
+
+.login-container h2 {
+    font-size: 1.5rem; /* Adjust as needed */
+    text-align: center;
+    color: #666; /* Change color as needed */
+    margin-bottom: 20px; /* Spacing between the heading and the form */
 }
