@@ -75,7 +75,8 @@
     position: relative;
     list-style: none;
     width: 100%;
-    margin-left: 10px;
+    
+    margin-left: 20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 30px;
 }

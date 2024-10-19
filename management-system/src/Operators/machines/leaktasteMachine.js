@@ -2,6 +2,7 @@ import React from 'react';
 import { Line, Bar, Pie } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js'; // Import Chart and registerables
 import './machines.css';
+import LeakTestMachineImage from '../assets/Leak Test Machine.png'; // Renamed import for the image
 
 // Register all necessary components
 Chart.register(...registerables);
@@ -111,6 +112,14 @@ const LeakTestMachine = () => {
 
     return (
         <div className="charts-flex">
+            {/* Title and Image Section */}
+            <div className="machine-info">
+                <h2>Leak Test Machine</h2>
+                <img src={LeakTestMachineImage} alt="Machine" className="machine-image" /> {/* Updated image source */}
+                <h3>Charts that express information about this machine</h3>
+            </div>
+
+            {/* Charts Section */}
             <div className="chart-container">
                 <Line data={pressureData} options={pressureOptions} />
             </div>
@@ -118,10 +127,10 @@ const LeakTestMachine = () => {
                 <Bar data={dropData} options={dropOptions} />
             </div>
             <div className="chart-container">
-                <Pie data={leakRateData} options={leakRateOptions} width={  150} height={150} />
+                <Pie data={leakRateData} options={leakRateOptions} width={150} height={150} />
             </div>
             <div className="chart-container">
-                <Pie data={durationData} options={durationOptions} width={150} height={150} />
+                <Pie data={durationData} options={durationOptions} />
             </div>
         </div>
     );

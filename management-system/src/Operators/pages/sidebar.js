@@ -13,23 +13,21 @@ const Sidebar = () => {
             <ul>
                 <li>
                     <a href="#">
-                        
                         <span className="title">Manager</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/dashboard"> {/* Updated link to /dashboard */}
                         <span className="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span className="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/admin/tasks"> {/* Updated link to /tasks */}
                         <span className="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span className="title">tasks</span>
+                        <span className="title">Tasks</span> {/* Fixed casing for "Tasks" */}
                     </a>
                 </li>
-                
                 <li>
                     <a href="#">
                         <span className="icon"><ion-icon name="help-outline"></ion-icon></span>
@@ -49,7 +47,7 @@ const Sidebar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/"> {/* Updated link to / for Sign Out */}
                         <span className="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                         <span className="title">Sign Out</span>
                     </a>
