@@ -8,6 +8,7 @@ import ReportDefects from './Operators/pages/ReportDefects'; // Ensure this is c
 import { AuthProvider } from './Operators/pages/AuthContext';
 import TasksPage from './Operators/pages/tasks';
 import HeaderOperator from './Operators/pages/headerOperator';
+import LeakTestMachine from './Operators/machines/leaktasteMachine';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/user" element={
                         <>
+                        
                             <HeaderOperator />
                             <ReportDefects />
                         </>
@@ -34,6 +36,7 @@ const App = () => {
                             <ReportDefects />
                         </>
                     } /> {/* Route for Report Defects */}
+                    <Route path="/machines" element={<LeakTestMachine />} />
                 </Routes>
             </Router>
         </AuthProvider>

@@ -1,0 +1,31 @@
+.leak-test-machine {
+    padding: 20px; /* Padding for the entire machine page */
+    background-color: #ecf0f1; /* Light background color */
+}
+
+.chart-container {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Three columns for charts */
+    gap: 20px; /* Gap between charts */
+}
+
+.chart-item {
+    background-color: white; /* Background for each chart */
+    padding: 20px; /* Padding for chart container */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    text-align: center; /* Center align text */
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for each chart */
+    margin: 20px; /* Margin around each chart */
+}
+
+.charts-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allow charts to wrap to the next line */
+    justify-content: space-around; /* Space between charts */
+    align-items: flex-start; /* Align items at the start of the flex container */
+}

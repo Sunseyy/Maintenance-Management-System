@@ -6,10 +6,6 @@
     flex-direction: column; /* Arrange items vertically */
 }
 
-body {
-   
-    background-color: #2b4a68; /* Dark blue background for body */
-}
 
 .tasks-list {
     display: grid; /* Use grid layout */

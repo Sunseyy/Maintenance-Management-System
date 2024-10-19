@@ -1,9 +1,5 @@
 /* src/css/Reportdefects.css */
-body {
-    background-color: #2b4a68;/* Dark background color for the overall layout */
-    color: white; /* Default text color */
-   
-}
+
 .H1-repport{
     margin-top: 20px;
     text-align: center;

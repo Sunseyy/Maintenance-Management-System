@@ -55,3 +55,21 @@
 .Check:hover {
     background-color: #7f8c8d; /* Darker shade on hover */
 }
+.chart-wrapper {
+    grid-column: span 2; /* Make the chart take up two columns */
+    margin-top: 20px; /* Space above the chart */
+    background-color: rgba(51, 39, 179, 0.169); /* Background color for the chart */
+    padding: 20px; /* Padding around the chart */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+.Check {
+    /* Other styles */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.Check.another:hover {
+    background-color: #bdc3c7; /* Change background color on hover */
+}
