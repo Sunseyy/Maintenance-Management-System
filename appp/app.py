@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     create_tables()  
     
-    callback_url = "https://91e8-105-235-133-202.ngrok-free.app/sensor-data"  
+    callback_url = "https://678f-105-235-133-202.ngrok-free.app/sensor-data"  
     machine_ids = [
         "welding_robot_006", "agv_003", "cnc_milling_004",
         "leak_test_005", "painting_robot_002", "stamping_press_001"
