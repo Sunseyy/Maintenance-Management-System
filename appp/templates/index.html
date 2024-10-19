@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+</head>
+<body>
+    <h1>Machine Visualizations</h1>
+    <ul>
+        {% for machine in machines %}
+            <li>
+                <a href="{{ url_for('visualization', machine_type=machine) }}">
+                    {{ machine.capitalize() }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h1>Sensor Data</h1>
+    <pre id="sensor-data">{{ sensor_data }}</pre>
+
+    <script>
+        async function fetchSensorData() {
+            const response = await fetch('/sensor-data');
+            const data = await response.json();
+            document.getElementById('sensor-data').textContent = JSON.stringify(data, null, 2);
+        }
+
+        // Fetch data every 20 seconds
+        setInterval(fetchSensorData, 20000);
+        fetchSensorData();  // Initial fetch
+    </script>
+</body>
+</html>

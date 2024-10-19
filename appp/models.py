@@ -1,0 +1,106 @@
+from datetime import datetime
+from config import db
+
+class WeldingData(db.Model):
+    __bind_key__ = 'welding_db'
+    id = db.Column(db.Integer, primary_key=True)
+    machine_id = db.Column(db.String(100), nullable=False)
+    weld_temperature = db.Column(db.Float, nullable=False)
+    weld_current = db.Column(db.Float, nullable=False)
+    weld_voltage = db.Column(db.Float, nullable=False)
+    weld_time = db.Column(db.Float, nullable=False)
+    pressure_applied = db.Column(db.Float, nullable=False)
+    arm_position_x = db.Column(db.Float, nullable=False)
+    arm_position_y = db.Column(db.Float, nullable=False)
+    arm_position_z = db.Column(db.Float, nullable=False)
+    wire_feed_rate = db.Column(db.Float, nullable=False)
+    gas_flow_rate = db.Column(db.Float, nullable=False)
+    weld_strength_estimate = db.Column(db.Float, nullable=False)
+    vibration_level = db.Column(db.Float, nullable=False)
+    power_consumption = db.Column(db.Float, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+class StampingPressData(db.Model):
+    __bind_key__ = 'stamping_db'
+    id = db.Column(db.Integer, primary_key=True)
+    machine_id = db.Column(db.String(100), nullable=False)
+    force_applied = db.Column(db.Float, nullable=False)
+    cycle_time = db.Column(db.Integer, nullable=False)
+    temperature = db.Column(db.Float, nullable=False)
+    vibration_level = db.Column(db.Float, nullable=False)
+    cycle_count = db.Column(db.Integer, nullable=False)
+    oil_pressure = db.Column(db.Float, nullable=False)
+    die_alignment = db.Column(db.String(50), nullable=False)
+    sheet_thickness = db.Column(db.Float, nullable=False)
+    power_consumption = db.Column(db.Float, nullable=False)
+    noise_level = db.Column(db.Float, nullable=False)
+    lubrication_flow_rate = db.Column(db.Float, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+class PaintingRobotData(db.Model):
+    __bind_key__ = 'painting_db'
+    id = db.Column(db.Integer, primary_key=True)
+    machine_id = db.Column(db.String(100), nullable=False)
+    spray_pressure = db.Column(db.Float, nullable=False)
+    paint_thickness = db.Column(db.Float, nullable=False)
+    arm_position_x = db.Column(db.Float, nullable=False)
+    arm_position_y = db.Column(db.Float, nullable=False)
+    arm_position_z = db.Column(db.Float, nullable=False)
+    temperature = db.Column(db.Float, nullable=False)
+    humidity = db.Column(db.Float, nullable=False)
+    paint_flow_rate = db.Column(db.Float, nullable=False)
+    paint_volume_used = db.Column(db.Float, nullable=False)
+    atomizer_speed = db.Column(db.Float, nullable=False)
+    overspray_capture_efficiency = db.Column(db.Float, nullable=False)
+    booth_airflow_velocity = db.Column(db.Float, nullable=False)
+    solvent_concentration = db.Column(db.Float, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+class AGVData(db.Model):
+    __bind_key__ = 'agv_db'
+    id = db.Column(db.Integer, primary_key=True)
+    machine_id = db.Column(db.String(100), nullable=False)
+    location_x = db.Column(db.Float, nullable=False)
+    location_y = db.Column(db.Float, nullable=False)
+    location_z = db.Column(db.Float, nullable=False)
+    battery_level = db.Column(db.Float, nullable=False)
+    load_weight = db.Column(db.Float, nullable=False)
+    speed = db.Column(db.Float, nullable=False)
+    distance_traveled = db.Column(db.Float, nullable=False)
+    obstacle_detection = db.Column(db.String(10), nullable=False)
+    navigation_status = db.Column(db.String(20), nullable=False)
+    vibration_level = db.Column(db.Float, nullable=False)
+    temperature = db.Column(db.Float, nullable=False)
+    wheel_rotation_speed = db.Column(db.Float, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+class CNCData(db.Model):
+    __bind_key__ = 'cnc_milling_db'
+    id = db.Column(db.Integer, primary_key=True)
+    machine_id = db.Column(db.String(100), nullable=False)
+    spindle_speed = db.Column(db.Float, nullable=False)
+    tool_wear_level = db.Column(db.Float, nullable=False)
+    cut_depth = db.Column(db.Float, nullable=False)
+    feed_rate = db.Column(db.Float, nullable=False)
+    vibration_level = db.Column(db.Float, nullable=False)
+    coolant_flow_rate = db.Column(db.Float, nullable=False)
+    material_hardness = db.Column(db.Float, nullable=False)
+    power_consumption = db.Column(db.Float, nullable=False)
+    temperature = db.Column(db.Float, nullable=False)
+    chip_load = db.Column(db.Float, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+class LeakTestData(db.Model):
+    __bind_key__ = 'leak_test_db'
+    id = db.Column(db.Integer, primary_key=True)
+    machine_id = db.Column(db.String(100), nullable=False)
+    test_pressure = db.Column(db.Float, nullable=False)
+    pressure_drop = db.Column(db.Float, nullable=False)
+    leak_rate = db.Column(db.Float, nullable=False)
+    test_duration = db.Column(db.Float, nullable=False)
+    temperature = db.Column(db.Float, nullable=False)
+    status = db.Column(db.String(10), nullable=False)
+    fluid_type = db.Column(db.String(10), nullable=False)
+    seal_condition = db.Column(db.String(10), nullable=False)
+    test_cycle_count = db.Column(db.Float, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
