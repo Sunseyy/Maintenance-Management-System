@@ -55,7 +55,7 @@ const App = () => {
                     <Route path="/admin/tasks" element={
                         <div>
                             <HeaderAdmin/>
-                            <Sidebar />
+                            
                             <TasksPage />
                         </div>
                     } />
@@ -64,6 +64,7 @@ const App = () => {
                         <HeaderAdmin></HeaderAdmin>
                         <Calendar /></>} /> {/* Fixed this line */}
                 </Routes>
+                
             </Router>
         </AuthProvider>
     );

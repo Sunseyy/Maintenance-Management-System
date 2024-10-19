@@ -21,44 +21,53 @@
 
 .interface {
     display: grid; /* Use grid layout for interface elements */
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 10px; /* Space between grid items */
 }
 
 .Add_event {
-    background-color: #3498db; /* Button background color */
+    background-color: #062a42; /* Button background color */
     color: white; /* Button text color */
     padding: 20px; /* Increased padding for button */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     text-align: center; /* Center text */
     transition: background-color 0.3s; /* Smooth background transition */
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
 
 .Add_event:hover {
-    background-color: #2980b9; /* Darker shade on hover */
+    background-color: #167061; /* Darker shade on hover */
 }
 
 .Check {
-    background-color: #95a5a6; /* Background color for check elements */
+    font-weight: 900;
+    color: white;
+    background-color: #3e705f; /* Background color for check elements */
     padding: 20px; /* Increased padding for check elements */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    box-shadow: 0 4px 8px #fff7f733; /* Box shadow for depth */
     display: flex; /* Flexbox for centering content */
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     transition: background-color 0.3s; /* Smooth background transition */
+    border-radius: 50px;
+    
 }
 
 .Check:hover {
-    background-color: #7f8c8d; /* Darker shade on hover */
+    background-color: #1b225b; /* Darker shade on hover */
 }
 .chart-wrapper {
     grid-column: span 2; /* Make the chart take up two columns */
     margin-top: 20px; /* Space above the chart */
-    background-color: rgba(51, 39, 179, 0.169); /* Background color for the chart */
+    background-color: rgba(191, 190, 201, 0.169); /* Background color for the chart */
     padding: 20px; /* Padding around the chart */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */

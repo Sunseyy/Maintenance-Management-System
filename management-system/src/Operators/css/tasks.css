@@ -16,7 +16,7 @@
 .task-card {
     border-radius: 5px;
     padding: 15px;
-    background-color: #180c5b; /* Dark background for task cards */
+    background-color: #429355; /* Dark background for task cards */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
 }
 
@@ -27,7 +27,7 @@
 .start-button {
     margin-top: 10px; /* Space above the button */
     padding: 10px; /* Padding for the button */
-    background-color: #5e9c6d; /* Green background */
+    background-color: #190e46; /* Green background */
     color: white; /* White text */
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
@@ -36,5 +36,5 @@
 }
 
 .start-button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #5255ad58; /* Darker green on hover */
 }

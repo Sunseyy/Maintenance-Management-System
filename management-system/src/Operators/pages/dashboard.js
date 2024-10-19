@@ -13,7 +13,8 @@ const Dashboard = () => {
                 <div className='interface'>
                     <Link to="/calendar" className='Add_event'> Add event </Link> {/* Change to Link for navigation */}
                     {/* Add your Calendar component here */}
-                    <div className='Check tasks'> Check tasks </div>
+                    
+                    <Link to="/admin/tasks" className='Check tasks'> Check tasks </Link>
                     <div className='Check users'> Check users </div>
                     <Link to="/machines" className='Check another'> Machines</Link> {/* Change to Link for navigation */}
                     <div className='chart-wrapper'>
