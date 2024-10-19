@@ -73,6 +73,7 @@ const Calendar = () => {
   }, [month, year, activeDay]);
 
   return (
+    <div className='Calendar_full'>
     <div className="container">
       <div className="left">
         <div className="calendar">
@@ -137,6 +138,7 @@ const Calendar = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

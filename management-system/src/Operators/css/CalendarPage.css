@@ -1,12 +1,7 @@
 :root {
     --primary-clr: #9DBDAA;
   }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
+ 
   /* nice scroll bar */
   ::-webkit-scrollbar {
     width: 5px;
@@ -20,9 +15,9 @@
     border-radius: 50px;
   }
   
-  body {
-    position: relative;
-    min-height: 100vh;
+  .Calendar_full {
+    
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +27,7 @@
   .container {
     position: relative;
     width: 1200px;
-    min-height: 850px;
+    min-height: 750px;
     margin: 0 auto;
     padding: 5px;
     color: #fff;

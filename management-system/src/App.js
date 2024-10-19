@@ -4,17 +4,36 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from './Operators/pages/Login';
 import Dashboard from './Operators/pages/dashboard';
-import ReportDefects from './Operators/pages/ReportDefects';
-import { AuthProvider } from './Operators/pages/AuthContext'; // Make sure this is the correct import
+import ReportDefects from './Operators/pages/ReportDefects'; // Ensure this is correct
+import { AuthProvider } from './Operators/pages/AuthContext';
+import TasksPage from './Operators/pages/tasks';
+import HeaderOperator from './Operators/pages/headerOperator';
 
 const App = () => {
     return (
-        <AuthProvider> {/* Use AuthProvider instead of AuthContext */}
+        <AuthProvider>
             <Router>
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/user" element={<ReportDefects />} />
+                    <Route path="/user" element={
+                        <>
+                            <HeaderOperator />
+                            <ReportDefects />
+                        </>
+                    } />
+                    <Route path="/tasks" element={
+                        <>
+                            <HeaderOperator />
+                            <TasksPage />
+                        </>
+                    } /> {/* Route for Tasks */}
+                    <Route path="/report-defects" element={
+                        <>
+                            <HeaderOperator />
+                            <ReportDefects />
+                        </>
+                    } /> {/* Route for Report Defects */}
                 </Routes>
             </Router>
         </AuthProvider>

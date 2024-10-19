@@ -15,15 +15,23 @@ const TaskCard = ({ task }) => {
   if (task.issues.vibrating) issues.push('Vibrating');
   if (task.issues.other) issues.push(`Other: ${task.issues.other}`);
 
+  const handleStart = () => {
+    // Add your logic to handle starting the task
+    alert(`Starting task for ${task.machineName}`); // Example alert for demonstration
+    // You might want to update the task's status in your database here
+  };
+
   return (
     <div className="task-card">
-      <h3>Machine Name: {task.machineName}</h3> {/* Display machine name */}
+      <h3>Machine Name: {task.machineName}</h3>
       <p>Status: {task.highPriority ? 'High Priority' : 'Normal Priority'}</p>
-      <p>Issues: {issues.length > 0 ? issues.join(', ') : 'No Issues'}</p> {/* Display issues */}
-      {task.media && <img src={task.media} alt={task.machineName} className='imagemachine' />} {/* Display image */}
+      <p>Issues: {issues.length > 0 ? issues.join(', ') : 'No Issues'}</p>
+      {task.media && <img src={task.media} alt={task.machineName} className='imagemachine' />}
+      <button className='start-button' onClick={handleStart}>START</button> {/* Add START button */}
     </div>
   );
 };
+
 
 const TasksPage = () => {
   const [tasks, setTasks] = useState([]); // State to store fetched tasks

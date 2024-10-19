@@ -41,32 +41,35 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container">
-            <h1 style={"margin-bottom: 20px;"}>Login</h1>
-            <form id="loginForm" onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <img src={userIcon} alt="User Icon" className="icon" />
-                    <input className='Input-login'
-                        type="email" // Change input type to email for better user experience
-                        placeholder="Email" // Change placeholder to Email
-                        required
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                </div>
-                <div className="input-container">
-                    <img src={lockIcon} alt="Lock Icon" className="icon" />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <button className='submitbutt' type="submit">Login</button>
-                <a href="#" className="forgot-password">Forgot Password?</a>
-            </form>
+        <div className="login-page"> {/* Added wrapper class here */}
+            <div className="login-container">
+                <h1 style={{ marginBottom: '20px' }}>Login</h1>
+                <form id="loginForm" onSubmit={handleSubmit}>
+                    <div className="input-container">
+                        <img src={userIcon} alt="User Icon" className="icon" />
+                        <input
+                            className='Input-login'
+                            type="email" // Change input type to email for better user experience
+                            placeholder="Email" // Change placeholder to Email
+                            required
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div className="input-container">
+                        <img src={lockIcon} alt="Lock Icon" className="icon" />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <button className='submitbutt' type="submit">Login</button>
+                    <a href="#" className="forgot-password">Forgot Password?</a>
+                </form>
+            </div>
         </div>
     );
 };

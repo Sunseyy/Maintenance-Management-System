@@ -1,4 +1,5 @@
 .tasks-page {
+   
     padding: 20px;
     background-color: #f4f4f4; /* Light gray background */
     display: flex; /* Keep display flex for the main page layout */
@@ -6,6 +7,7 @@
 }
 
 body {
+   
     background-color: #2b4a68; /* Dark blue background for body */
 }
 
@@ -25,4 +27,18 @@ body {
 .imagemachine {
     width: 100%; /* Ensure images take full width of the card */
     height: auto; /* Maintain aspect ratio */
+}
+.start-button {
+    margin-top: 10px; /* Space above the button */
+    padding: 10px; /* Padding for the button */
+    background-color: #5e9c6d; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.start-button:hover {
+    background-color: #218838; /* Darker green on hover */
 }
